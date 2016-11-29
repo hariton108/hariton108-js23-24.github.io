@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+
+	<script type="text/template" id="wrapper-template">
+		<div class="wrapper">
+			<ul class="item-list"></ul>
+			<div class="controlls">
+				<input type="text" class="controlls__item-value">
+				<button class="controlls__item-add">Add</button>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="list-template">
+		<% for (var i = 0; i < data.length; i++) { %>
+			<li class="item-list__item">
+				<input type="text" class="item-list__item-input" value="<%= data[i] %>" disabled>
+				<span data-value="<%= data[i] %>" class="item-list__item-edit">Edit</span>
+				<span data-value="<%= data[i] %>" class="item-list__item-delete">Delete</span>
+			</li>
+		<% }; %>
+	</script>
+
+</body>
+</html>
